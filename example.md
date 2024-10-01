@@ -1,20 +1,132 @@
 ---
 theme: ./
+colorSchema: light
+selectable: true
 ---
 
-# Slidev Theme Starter
+# タイトル
 
-Presentation slides for developers
+サブタイトル
 
-<div class="pt-12">
-  <span @click="next" class="px-2 p-1 rounded cursor-pointer hover:bg-white hover:bg-opacity-10">
-    Press Space for next page <carbon:arrow-right class="inline"/>
-  </span>
+<div class="mt-auto">
+  <div class="text-11px font-bold">
+  所属
+  </div>
+  <div class="text-16px font-bold">
+  氏名
+  </div>
 </div>
+
+---
+layout: section
+---
+
+# タイトル
+
+## サブタイトル
+
+---
+layout: section
+---
+
+# タイトル<br>２行
+
+## サブタイトル
+
+---
+
+# タイトル
+
+## サブタイトル
+
+- 箇条書き[^1]
+- 箇条書き
+
+[^1]: https://example.com
+
+---
+
+# Content with Image
+
+## 画像サイズは固定
+
+高さは固定のため必要に応じてCSSで調整をする
+
+![/sample1.drawio.svg](/sample1.drawio.svg)
+
+<style>
+  img {
+    @apply !h-86;
+  }
+</style>
+
+---
+layout: two-cols-header
+---
+
+# Tow cols header
+
+## ２列にしたい場合
+
+::left::
+
+![/sample1.drawio.svg](/sample1.drawio.svg)
+
+::right::
+
+画像を使う場合はこちらを使った方が納まりが良い
+
+- 主体となるコンテンツを左に配置する
+
+---
+layout: two-cols-header
+---
+
+# Tow cols header
+
+## ２列にしたい場合
+
+画像を2枚並べたりも出来る
+
+::left::
+
+![/sample1.drawio.svg](/sample1.drawio.svg)
+
+::right::
+
+![/sample2.drawio.svg](/sample2.drawio.svg)
+
+<style>
+  img{
+    @apply !object-cover !h-84
+  }
+</style>
+
+---
+layout: two-cols-header
+---
+
+# Tow cols header
+
+## ２列にしたい場合
+
+::left::
+
+### 画像の`height`の目安
+
+- defaultで１行加える場合は `!h-86`
+- tow-cols-headerで1行加える場合は `!h-84`
+- 画像を広げる場合は`!object-cover`
+
+::right::
+
+![/sample1.drawio.svg](/sample1.drawio.svg)
 
 ---
 
 # What is Slidev?
+
+## Subtitle
 
 Slidev is a slide maker and presentation tool designed for developers. It includes the following features:
 
@@ -78,3 +190,7 @@ class: "text-center"
 # Learn More
 
 [Documentation](https://sli.dev) / [GitHub Repo](https://github.com/slidevjs/slidev)
+
+---
+layout: end
+---
