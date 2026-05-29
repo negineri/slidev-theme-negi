@@ -1,5 +1,5 @@
 {
-  "name": "slidev-theme-negi",
+  "name": "@negineri/slidev-theme-negi",
   "version": "0.1.0",
   "type": "module",
   "keywords": [
@@ -16,12 +16,12 @@
     "screenshot": "slidev export example.md --format png"
   },
   "dependencies": {
-    "@slidev/types": "^0.50.0-beta.1",
+    "@slidev/types": "^52.15.2",
     "prism-theme-vars": "^0.2.5"
   },
   "devDependencies": {
-    "@slidev/cli": "^0.50.0-beta.1",
-    "prettier": "^3.3.3",
+    "@slidev/cli": "^52.15.2",
+    "prettier": "^3.8.3",
     "prettier-plugin-slidev": "^1.0.5"
   },
   "//": "Learn more: https://sli.dev/guide/write-theme.html",
@@ -30,8 +30,9 @@
     "highlighter": "all",
     "defaults": {
       "fonts": {
-        "provider": "none",
-        "sans": "LINE Seed JP_OTF",
+        "provider": "google",
+        "sans": "LINE Seed JP",
+        "weights": "100,400,700,800",
         "mono": "Fira Code"
       }
     }
@@ -52,5 +53,9 @@
         }
       }
     ]
+  },
+  "publishConfig": {
+    "access": "restricted",
+    "registry": "https://npm.pkg.github.com/"
   }
 }
